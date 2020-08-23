@@ -5,6 +5,7 @@
 项目总体结构就是一个响应式的架构，前台`vue`，`ui`库使用`iview`，后台`nodejs`、数据库`mysql`，可适配多端：`PC`，`移动端`。
 
 #### 项目地址
+[cosyer's blog](http://blog.mydearest.cn)
 
 #### 一、首页功能
 
@@ -66,4 +67,5 @@ npm run build
 也可以build后放到public文件夹访问localhost:3000
 
 - 服务端部署
-替换localhost:3000 => ip:3000
+替换localhost:3000 => ip:3000/域名
+切换开发模式

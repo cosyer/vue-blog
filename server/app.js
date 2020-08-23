@@ -12,6 +12,7 @@ var messageRouter = require("./routes/leavemessage");
 var pageRouter = require("./routes/page");
 var musicRouter = require("./routes/music");
 const session = require("express-session");
+const config = require("./config");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -28,23 +29,30 @@ app.use(
 
 app.use(logger("dev"));
 /* 开发模式 */
-app.use(
-  cors({
-    origin: ["http://localhost:8080", "http://192.168.51.221:8080"],
-    credentials: true,
-  })
-);
-/* 上线模式 */
-// app.use(cors({
-//   origin:['http://codelei.cn','http://www.codelei.cn'],
-//   credentials: true
-// }))
+if (config.dev) {
+  app.use(
+    cors({
+      origin: ["http://localhost:8080", "http://192.168.51.221:8080"],
+      credentials: true,
+    })
+  );
+} else {
+  /* 上线模式 */
+  app.use(
+    cors({
+      origin: ["http://codelei.cn", "http://www.codelei.cn"],
+      credentials: true,
+    })
+  );
+}
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 /* 配置静态资源目录 */
 app.use("/", express.static(__dirname + "/public"));
+
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use("/talkImages", express.static(__dirname + "/talkImages"));
 app.use("/images", express.static(__dirname + "/images"));
@@ -55,6 +63,9 @@ app.use("/note", noteRouter);
 app.use("/message", messageRouter);
 app.use("/page", pageRouter);
 app.use("/music", musicRouter);
+
+// 处理history模式匹配静态资源
+app.use("*", express.static(__dirname + "/public"));
 
 /* 捕捉404 */
 app.use(function(req, res, next) {

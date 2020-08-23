@@ -4,7 +4,8 @@ var multer = require("multer");
 const mysql = require("./mysql");
 const fs = require("fs");
 const Path = require("path");
-const baseURL = "http://localhost:3000";
+const config = require("../config");
+const baseURL = config.dev ? "http://localhost:3000" : "";
 /* 头像上传. */
 var upload = multer({ dest: __dirname + "/../uploads" });
 router.post("/headPortraitUpload", upload.single("file"), (req, res) => {
