@@ -1,0 +1,124 @@
+.bread-div{
+    padding: .5rem;
+    border-bottom:1px solid #eee;
+    background-color: #e1f0ff;
+}
+.detailed-title{
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+.center{
+    text-align: center;
+}
+.detailed-content{
+    padding: 1.3rem;
+    font-size: 1rem;
+}
+.markdown-body {padding-bottom: 1rem;}
+.markdown-body pre{
+    display: block;
+     padding: .5rem !important;
+     overflow-y: auto;
+     font-weight: 300;
+     font-family: Menlo, monospace;
+     border-radius: .3rem;
+}
+.markdown-body code {
+    display: inline-block ;
+    border-radius:3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0px 3px;
+}
+.markdown-body pre{
+    background-color: #333333 !important;
+}
+.markdown-body pre >code{
+    border:0px !important;
+    color: white;
+    background-color: #333333 !important;
+}
+.markdown-body .title-anchor{
+    color:#888 !important;
+    padding:4px !important;
+    margin: 0rem !important;
+    height: auto !important;
+    line-height: 1.2rem !important;
+    font-size: .7rem !important;
+    border-bottom: 1px dashed #eee;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.markdown-body .active{
+    color:rgb(30, 144, 255) !important;
+}
+.markdown-body .nav-title{
+    text-align: center;
+    color: #888;
+    border-bottom: 1px solid rgb(30, 144, 255);
+
+}
+.markdown-body .article-menu{
+    font-size:12px;
+}
+iframe{
+    height: 34rem;
+}
+.markdown-body .detailed-content  img{
+    width: 100%;
+    border:1px solid #f3f3f3;
+}
+.markdown-body .title-level3{
+    display: none !important;
+}
+.markdown-body .ant-anchor-link-title{
+    font-size: 12px !important;
+}
+.markdown-body .ant-anchor-wrapper{
+    padding: 5px !important;
+}
+.markdown-body h4 {
+    color: #7e06ee !important;
+    margin-top: 1rem;
+}
+.markdown-body img {
+    width: 50%;
+    box-shadow: 0 0 2px #333;
+    margin-top: 0.5rem;
+}
+@media screen and (max-width: 587px) {
+    .markdown-body img {
+        width: 100%;
+    }
+}
+#carditem .content h4 {
+    color: rgb(241, 194, 106);
+}
+.markdown-body h3 {
+    color: #000 !important;
+    margin-top: 0.6rem;
+}
+.markdown-body h5 {
+    color: #204969 !important;
+    margin: 1rem 0 0.6rem 0;
+    line-height: 1.5rem;
+}
+.markdown-body p {
+    position: relative;
+    margin: 1rem 0!important;
+    padding: 0 0.3rem;
+    color: #000;
+}
+.markdown-body p>code,
+.markdown-body li>code {
+    color:red;
+    background: rgb(252, 215, 215);
+}
+
+.markdown-body li {
+    margin-top: 1rem;
+    height: 3rem;
+}
