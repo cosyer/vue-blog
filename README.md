@@ -55,3 +55,6 @@ npm run serve
 ```
 npm run build
 ```
+
+#### 后台管理页面 /admin/login 
+需要管理员账号登录，给`admin`表加数据。

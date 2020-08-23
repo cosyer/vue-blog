@@ -4,18 +4,18 @@ const mysql = require("./mysql");
 const send = require("../sendmailer/mailsend");
 const Jwt = require("./jsonwebtoken");
 const { UpdateUser } = require("./updateUser");
-/* 登陆注册结合的一个接口 */
+/* 登录注册结合的一个接口 */
 router.post("/login", (req, res) => {
   const { user, password, email, code } = req.body;
   mysql.connect(() => console.log("connect ok!"));
-  /* 如果不存在邮箱 那么就是登陆状态 */
+  /* 如果不存在邮箱 那么就是登录状态 */
   if (!email) {
     mysql.query(
       `SELECT * FROM user WHERE username = '${user}' AND password = '${password}';`,
       (err, data) => {
         if (!err) {
           if (data[0] != null) {
-            /* 登陆成功 我们直接就生成一个token给的用户传递过去 */
+            /* 登录成功 我们直接就生成一个token给的用户传递过去 */
             const token = Jwt.createToken({ username: user, login: true });
             return res.send({ err: 0, data: data, token: token });
           } else {
@@ -108,7 +108,7 @@ router.post("/getuserInfo", (req, res) => {
     .catch((err) => {
       /* token 过期 */
       if (err.name === "TokenExpiredError") {
-        return res.json({ err: -998, message: "登陆信息已过期请重新登陆!" });
+        return res.json({ err: -998, message: "登录信息已过期请重新登录!" });
       } else {
         return res.json({ err: -999, message: "非法的token!" });
       }
@@ -170,7 +170,7 @@ router.post("/primaryInfo", (req, res) => {
     .catch((err) => {
       /* token 过期 */
       if (err.name === "TokenExpiredError") {
-        return res.json({ err: -998, message: "登陆信息已过期请重新登陆!" });
+        return res.json({ err: -998, message: "登录信息已过期请重新登录!" });
       } else {
         return res.json({ err: -999, message: "非法的token!" });
       }
@@ -207,11 +207,11 @@ router.get("/adminIslogined", (req, res) => {
   if (req.session.adminlogin) {
     return res.json({ err: 0, message: "欢迎回来最帅的站长!" });
   } else {
-    return res.json({ err: -999, message: "您还没有登陆,请先去登陆！" });
+    return res.json({ err: -999, message: "您还没有登录,请先去登录！" });
   }
 });
 
-// 后台登陆验证
+// 后台登录验证
 router.post("/adminUserCheck", (req, res) => {
   const { password, username } = req.body;
   const checksql = "SELECT * FROM admin WHERE username = ? AND password = ?";
