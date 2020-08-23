@@ -44,7 +44,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 /* 配置静态资源目录 */
-app.use("/public", express.static(__dirname + "/public"));
+app.use("/", express.static(__dirname + "/public"));
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use("/talkImages", express.static(__dirname + "/talkImages"));
 app.use("/images", express.static(__dirname + "/images"));
