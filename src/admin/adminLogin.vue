@@ -26,7 +26,7 @@
               href="#"
               class="social"
             >
-              <i class="iconfont icon-weibo-copy"></i>
+              <i class="iconfont icon-weibo"></i>
             </a>
           </div>
           <span>您可以选择以上几种方式注册一个您的账户!</span>
@@ -73,7 +73,7 @@
               href="#"
               class="social"
             >
-              <i class="iconfont icon-weibo-copy"></i>
+              <i class="iconfont icon-weibo"></i>
             </a>
           </div>
           <span>您可以选择以上几种方式登录您的账户!</span>
