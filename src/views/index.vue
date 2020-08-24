@@ -25,12 +25,10 @@
       v-show="$store.state.LoadingShow"
     />
     <Tab-contorle />
-    <Footer v-if="!$route.path.includes('admin')" />
   </div>
 </template>
 <script>
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import TabContorle from "../components/Tabcontorle";
 import light from "../components/highlight/light";
 import Loading from "../components/Loading/Loading";
@@ -39,7 +37,6 @@ export default {
   components: {
     Header,
     TabContorle,
-    Footer,
     light,
     Loading,
   },
