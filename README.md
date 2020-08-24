@@ -2,7 +2,8 @@
 # vue + iview + node + mysql博客
 
 ### 前言
-项目总体结构就是一个响应式的架构，前台`vue`，`ui`库使用`iview`，后台`nodejs`、数据库`mysql`，可适配多端：`PC`，`移动端`。
+项目总体结构就是一个响应式的架构，前台`vue`，`ui`库使用`iview`，后台`nodejs`、数据库`mysql`，可适配多端：`PC`，`移动端`。带后台管理系统，支持：登陆/注册，留言，评论/回复，点赞，记录浏览数
+量，带有相册功能，内容丰富，当然也可以发表文章。
 
 #### 项目地址
 [cosyer's blog](http://blog.mydearest.cn)
