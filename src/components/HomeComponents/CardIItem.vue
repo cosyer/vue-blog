@@ -41,7 +41,7 @@
             src="../../assets/images/swiper1.jpeg"
             alt=""
           >
-          <p>嫰贼</p>
+          <p>嫩贼</p>
         </div>
         <p class="publictime">
           <Icon type="ios-clock-outline" /> {{time | timeFilter}}</p>

@@ -8,6 +8,10 @@
 #### 项目地址
 [cosyer's blog](http://blog.mydearest.cn)
 
+[Many-people-blog](https://github.com/Acmenlei/Many-people-blog)
+
+[codelei](http://codelei.cn/home)
+
 #### 一、首页功能
 
 > 首页使用简约式架构，看上去非常的简约，出场动画是一个移动效果，使用媒体查询对网站大小的不同给出不同的背景，个人觉得还是挺养眼的，不会那么花里胡哨，里面结合了我觉得比较好看的一些`demo`和`c3`动画元素，我把首页图放在下面了：
