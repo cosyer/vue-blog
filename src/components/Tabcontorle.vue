@@ -133,8 +133,7 @@ export default {
       font-size: 25px;
       position: relative;
       background: linear-gradient(yellow, red);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
     img {

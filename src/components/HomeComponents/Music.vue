@@ -40,7 +40,7 @@ export default {
   methods: {
     getMusic(id) {
       getnotedetail(`/music/getmusic/${id}`).then((res) => {
-        if (res.data.err == 0) {
+        if (res.data.err == 0 && res.data.data?.length > 0) {
           this.music_link = `//music.163.com/outchain/player?type=2&id=${res.data.data[0].music_id}&auto=0&height=66`;
           this.music_index = res.data.data[0].id;
         } else {

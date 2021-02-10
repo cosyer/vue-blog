@@ -14,7 +14,7 @@
     <light @changeBackground="changeBG" />
     <Header
       v-if="!$route.path.includes('admin')"
-      :class="{active:$route.name != 'home' || $store.state.isshow}"
+      :class="{active:$route.name !== 'home' || $store.state.isshow}"
       class="header"
     />
     <keep-alive exclude="detail,profile">

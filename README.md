@@ -66,11 +66,12 @@ npm run build
 需要管理员账号登录，给`admin`表加数据。
 
 - 本地开发 
-前端服务: localhost:8080
+1. 前端服务: localhost:8080
 后端服务: localhost:3000 
+切换开发模式 server/config
 
-也可以build后放到public文件夹访问localhost:3000
+2. 也可以build后放到public文件夹访问localhost:3000
 
 - 服务端部署
 替换localhost:3000 => ip:3000/域名
-切换开发模式
+
